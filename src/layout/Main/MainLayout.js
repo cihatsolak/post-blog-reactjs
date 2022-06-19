@@ -3,18 +3,17 @@ import PropTypes from 'prop-types'
 import { Layout } from 'antd'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Header from '../../components/Header/Header'
+import { Content } from 'antd/lib/layout/layout'
 
 const MainLayout = ({ children }) => {
     return (
         <Layout>
             <Sidebar />
-            <Layout>
+            <Layout style={{ marginLeft: '200px' }}>
                 <Header />
-                {
-                    /*Header*/
-                    /*Content*/
-                }
-                {children}
+                <Content>
+                    {children}
+                </Content>
             </Layout>
         </Layout>
     )
