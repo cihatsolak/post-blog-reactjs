@@ -9,9 +9,11 @@ const Sidebar = () => {
             <Menu theme="dark" mode="inline" defaultSelectedKeys={["/"]}>
                 <Menu.Item key="/">
                     {/* <Link to="/">Ana Sayfa</Link> */}
+                    Ana Sayfa
                 </Menu.Item>
                 <Menu.Item key="/post/create-post">
                     {/* <Link to="/post/create-post">Post Oluştur</Link> */}
+                    Post Oluştur
                 </Menu.Item>
             </Menu>
         </Layout.Sider>
