@@ -1,13 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AppRoutes from './AppRoutes'
+import RendererComponent from './RendererComponent'
 
 const Router = () => {
-
-    const renderComponent = (item) => {
-        return <>{item.component}</>
-    }
-
     return (
         <>
             <Routes>
@@ -18,15 +14,15 @@ const Router = () => {
                                 {
                                     item.children
                                         ?
-                                        <Route path={item.path} element={renderComponent(item)}>
+                                        <Route path={item.path} element={RendererComponent(item)}>
                                             {
                                                 item.children.map((subItem, index) => {
-                                                    return <Route key={index} path={subItem.path} element={renderComponent(subItem)} />
+                                                    return <Route key={index} path={subItem.path} element={RendererComponent(subItem)} />
                                                 })
                                             }
                                         </Route>
                                         :
-                                        <Route path={item.path} element={renderComponent(item)} />
+                                        <Route path={item.path} element={RendererComponent(item)} />
                                 }
                             </React.Fragment>
                         )
