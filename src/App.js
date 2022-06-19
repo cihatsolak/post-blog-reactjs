@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Router from './router/Router';
-import { useEffect } from 'react';
-import { request } from './request/Request';
+import { useEffect } from "react";
+import { socket } from "./socket/socket";
+import store from './store/store'
+import { setSocketID } from "./store/socketSlice/SocketSlice";
+import Router from "./router/Router";
 
 function App() {
 
   useEffect(() => {
-    request.get('/test')
-  }, [])
+    socket.on('connect', () => {
+      store.dispatch(setSocketID(socket.id))
+    })
+  })
 
   return (
     <>

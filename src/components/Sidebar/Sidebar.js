@@ -1,19 +1,21 @@
 import React from 'react'
 import { Menu, Layout } from 'antd'
 import './Sidebar.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+    const location = useLocation();
+    
     return (
-        <Layout.Sider className='side-bar'>
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={["/"]}>
+        <Layout.Sider className="side-bar">
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={[location.pathname]}>
                 <Menu.Item key="/">
-                    {/* <Link to="/">Ana Sayfa</Link> */}
-                    Ana Sayfa
+                    <Link to="/"> Ana Sayfa
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="/post/create-post">
-                    {/* <Link to="/post/create-post">Post Oluştur</Link> */}
-                    Post Oluştur
+                    <Link to="/post/create-post"> Post Oluştur
+                    </Link>
                 </Menu.Item>
             </Menu>
         </Layout.Sider>

@@ -7,12 +7,11 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../../store/authSlice/AuthSlice";
 
 const SignIn = () => {
-
   const dispatch = useDispatch()
   const navigate = useNavigate()
-
-  const [form] = Form.useForm()
   
+  const [form] = Form.useForm()
+
   const onFinish = (values) => {
     request.post('/user/signIn', {
       user_name: values.username,
@@ -22,7 +21,6 @@ const SignIn = () => {
       navigate('/')
     })
   }
-
   return (
     <Card className="sign-in-card">
       <div className="sign-in-logo">
