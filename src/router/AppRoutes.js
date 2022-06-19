@@ -13,7 +13,7 @@ const AppRoutes = [
     },
     {
         component: <Post />,
-        path: '/',
+        path: '/post',
         protect: true,
         children: [
             {
@@ -25,7 +25,7 @@ const AppRoutes = [
     },
     {
         component: <Auth />,
-        path: '/',
+        path: '/auth',
         protect: true,
         children: [
             {

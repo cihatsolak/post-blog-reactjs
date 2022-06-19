@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
     return (
         <Layout>
             <Sidebar />
-            <Layout style={{ marginLeft: '200px' }}>
+            <Layout>
                 <Header />
                 <Content>
                     {children}
