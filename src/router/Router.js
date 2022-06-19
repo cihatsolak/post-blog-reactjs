@@ -8,22 +8,18 @@ const Router = () => {
         <>
             <Routes>
                 {
-                    AppRoutes.map((item, index) => {
+                    AppRoutes.map((item) => {
                         return (
-                            <React.Fragment key={index}>
-                                {
-                                    item.children
-                                        ?
-                                        <Route path={item.path} element={RenderComponent(item)}>
-                                            {
-                                                item.children.map((subItem, index) => {
-                                                    return <Route key={index} path={subItem.path} element={RenderComponent(subItem, false)} />
-                                                })
-                                            }
-                                        </Route>
-                                        :
-                                        <Route path={item.path} element={RenderComponent(item)} />
-                                }
+                            <React.Fragment key={item.path}>
+                                {item.children ? <>
+                                    <Route path={item.path} key={item.path} element={RenderComponent(item)} >
+                                        {item.children.map((subItem) => {
+                                            return (
+                                                <Route path={subItem.path} key={subItem.path} element={RenderComponent(subItem)} />
+                                            )
+                                        })}
+                                    </Route>
+                                </> : <Route path={item.path} key={item.path} element={RenderComponent(item, false)} />}
                             </React.Fragment>
                         )
                     })

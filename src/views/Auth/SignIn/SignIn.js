@@ -1,5 +1,5 @@
 import { Button, Card, Form, Input } from "antd";
-import './SignIn.css'
+import './SingIn.css'
 import logo from '../../../assets/logos/logo.png'
 import { useNavigate } from "react-router-dom";
 import { request } from "../../../request/Request";
