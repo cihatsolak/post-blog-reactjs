@@ -5,7 +5,7 @@ import './Content.css'
 
 const Content = ({ children }) => {
     return (
-        <Layout.Content className="app-content">
+        <Layout.Content className="app-content container">
             <div className='app-content-wrapper'>
                 {children}
             </div>
