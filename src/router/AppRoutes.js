@@ -26,7 +26,7 @@ const AppRoutes = [
     {
         component: <Auth />,
         path: '/auth',
-        protect: true,
+        protect: false,
         children: [
             {
                 component: <SignIn />,
