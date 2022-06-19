@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.min.css'
-import MainLayout from '../src/layout/Main/MainLayout'
+import AuthLayout from '../src/layout/Auth/AuthLayout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainLayout>
+    <AuthLayout>
         <App />
-    </MainLayout>
+    </AuthLayout>
   </React.StrictMode>
 );
 
